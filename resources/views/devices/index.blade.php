@@ -11,8 +11,10 @@
                     @include('partials.messages')
                     @if( $devices->total() > 0 )
                     Total de resultados: {{ $devices->total() }}
+                    {{ session(['urlPrevious'=> request()->fullurl()]) }}
                     <table class="table table-hover table-condensed">
                         <thead>
+                            <th>Mant</th>
                             <th>Elemento</th>
                             <th>Descripción</th>
                             <th>Placa interna</th>
@@ -25,6 +27,7 @@
                         <tbody>
                             @foreach ($devices as $device)
                                 <tr>
+                                    <td>{{ $device->mant }}</td>
                                     <td>{{ $device->element->name }}</td>
                                     <td><p class="text-justify">{{ substr($device->description, 0, 92) }}</p></td>
                                     <td>{{ $device->code }}</td>

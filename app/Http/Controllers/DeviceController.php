@@ -140,8 +140,8 @@ class DeviceController extends Controller
             ]);
             $device->update($request->all());
             return redirect()
-                   ->route('devices.index')
-                   ->with('info', 'Dispositivo actualizado correctamente, serial: '.$request->input('serial').' placa: '. $request->input('code'));
+                   ->route('devices.show', $device->id)
+                   ->with('info', 'Dispositivo actualizado correctamente');
         }else{
             abort(404);
         }

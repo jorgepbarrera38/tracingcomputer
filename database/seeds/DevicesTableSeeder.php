@@ -63,6 +63,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //3
         Device::create([
+            'mant'=>'ok',
             'funcionary_id' => 18,
             'ubication_id' => 1,
             'dependence_id' => 5,
@@ -87,6 +88,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //4
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 19,
             'ubication_id' => 1,
             'dependence_id' => 5,
@@ -111,6 +113,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //5
         Device::create([
+            'mant'=> 'ok',
             'funcionary_id' => 20,
             'ubication_id' => 1,
             'dependence_id' => 5,
@@ -1408,6 +1411,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //59
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 17,
             'ubication_id' => 1,
             'dependence_id' => 5,
@@ -1624,6 +1628,7 @@ class DevicesTableSeeder extends Seeder
         ]);
          //68
          Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 53,
             'ubication_id' => 1,
             'dependence_id' => 20,
@@ -1636,7 +1641,7 @@ class DevicesTableSeeder extends Seeder
             'usefullife' => '5',
             'brand_id' => 3,
             'serial' => 'MXK6200D95',
-            'code' => '00606',
+            'code' => '3136',
             'observations' => 'Sin observaciónes'
         ]);
         Traceability::create([
@@ -1696,6 +1701,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //71
         Device::create([
+            'mant'=> 'ok',
             'funcionary_id' => 56,
             'ubication_id' => 1,
             'dependence_id' => 15,
@@ -1720,6 +1726,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //72
         Device::create([
+            'mant'=> 'ok',
             'funcionary_id' => 56,
             'ubication_id' => 1,
             'dependence_id' => 15,
@@ -1732,7 +1739,7 @@ class DevicesTableSeeder extends Seeder
             'usefullife' => '5',
             'brand_id' => 2,
             'serial' => 'PBHGM29',
-            'code' => 'No tiene placa',
+            'code' => '2598',
             'observations' => 'Sin observaciónes'
         ]);
         Traceability::create([
@@ -1912,6 +1919,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //80
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 5,
             'ubication_id' => 1,
             'dependence_id' => 5,

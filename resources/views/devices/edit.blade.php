@@ -102,7 +102,7 @@
                         </div>
                         <hr>
                         <center><button type="submit" class="btn btn-primary">Guardar cambios</button>
-                        <a href="{{ route('devices.show', $device->id) }}" class="btn btn-danger">Cancelar</a></center>
+                        <a href="{{ url()->previous() }}" class="btn btn-danger">Cancelar</a></center>
                     </form>
                 </div>
             </div>

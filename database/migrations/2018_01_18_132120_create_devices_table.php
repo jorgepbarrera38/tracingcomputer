@@ -44,6 +44,9 @@ class CreateDevicesTable extends Migration
             $table->string('serial', 100)->unique();
             $table->string('code', 100)->unique();
             $table->text('observations')->nullable();
+
+            $table->string('mant')->nullable();
+
             $table->timestamps();
         });
     }

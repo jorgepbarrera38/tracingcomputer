@@ -4,14 +4,20 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">{{ substr($device->description, 0, 61) }} <div class="pull-right"><a href="{{ route('devices.edit', $device->id) }}" class="btn btn-success btn-sm">Editar</a> <a class="btn btn-danger btn-sm" onclick="document.getElementById('form-delete').submit()">Dar de baja</a>
-                <form action="{{ route('devices.destroy', $device->id) }}" method="post" id="form-delete" style="display: none">
-                    {{ csrf_field() }}
-                    {{ method_field('delete') }}
-                    <button type="submit">Eliminar</button>
-                </form>
-                </div></div>
+                <div class="panel-heading">{{ substr($device->description, 0, 61) }} 
+                    <div class="pull-right">
+                        <a href="{{ session('urlPrevious') }}" class="btn btn-warning btn-sm">Atrás</a> 
+                        <a href="{{ route('devices.edit', $device->id) }}" class="btn btn-success btn-sm">Editar</a> 
+                        <a class="btn btn-danger btn-sm" onclick="document.getElementById('form-delete').submit()">Dar de baja</a>
+                        <form action="{{ route('devices.destroy', $device->id) }}" method="post" id="form-delete" style="display: none">
+                            {{ csrf_field() }}
+                            {{ method_field('delete') }}
+                            <button type="submit">Eliminar</button>
+                        </form>
+                    </div>
+                </div>
                 <div class="panel-body">
+                        @include('partials.messages')
                     <div class="col-md-6">
                         <label for="">Elemento: </label>
                         {{ $device->element->name }} <br>
