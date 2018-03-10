@@ -6,7 +6,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Editar dispositivo</div>
                 <div class="panel-body">
-                    <form action="{{ route('devices.update', $device->id) }}" method="post">
+                    <form action="{{ route('devices.update', $device->id) }}" method="post" enctype="multipart/form-data">
                         @include('partials.errors')
                         {{ csrf_field() }}
                         {{ method_field('PUT') }}
@@ -93,10 +93,16 @@
                                     <input type="date" class="form-control" name="initoperation" value="{{ old('initoperation') ? old('initoperation') : $device->initoperation }}">
                                 </div>
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="">Vida útil</label>
                                     <input type="number" class="form-control" name="usefullife" value="{{ old('usefullife') ? old('usefullife') : $device->usefullife }}">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Foto</label>
+                                    <input type="file" class="form-control" name="photo">
                                 </div>
                             </div>
                         </div>

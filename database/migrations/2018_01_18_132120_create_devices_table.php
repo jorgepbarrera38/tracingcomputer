@@ -46,6 +46,7 @@ class CreateDevicesTable extends Migration
             $table->text('observations')->nullable();
 
             $table->string('mant')->nullable();
+            $table->string('photo')->nullable();
 
             $table->timestamps();
         });

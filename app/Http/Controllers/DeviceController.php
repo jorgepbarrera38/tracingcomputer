@@ -137,8 +137,12 @@ class DeviceController extends Controller
                 'datebuy'=> 'required|date',
                 'initoperation'=> 'required|date',
                 'usefullife' => 'required|numeric',
+                'photo' => 'image'
             ]);
-            $device->update($request->all());
+            if($request->hasFile('photo')){
+                $device->photo = $request->file('photo')->store('photos');
+            }
+            $device->update($request->except('photo'));
             return redirect()
                    ->route('devices.show', $device->id)
                    ->with('info', 'Dispositivo actualizado correctamente');

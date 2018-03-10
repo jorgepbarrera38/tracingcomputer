@@ -21,6 +21,7 @@ class Device extends Model
         'usefullife', 
         'serial', 
         'code', 
+        'photo',
         'observations'//
     ];
     public function brand(){
