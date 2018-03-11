@@ -40,7 +40,7 @@ class DeviceController extends Controller
                    ->orderBy('ubication_id', 'asc')
                    ->orderBy('dependence_id', 'desc')
                    ->where('state', 'active')
-                   ->paginate(7);    
+                   ->paginate(5);    
 
         return view('devices.index', ['devices'=>$devices, 'ubicationsearch'=>$ubicationsearch, 'dependencesearch'=>$dependencesearch, 'funcionarysearch'=>$funcionarysearch,'codeserialsearch'=>$codeserialsearch,'ubications'=>$ubications, 'dependences'=>$dependences, 'funcionaries'=>$funcionaries, 'devicesCount'=>$devicesCount]);
     }

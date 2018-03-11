@@ -17,10 +17,10 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                        @include('partials.messages')
+                    @include('partials.messages')
                     <div class="col-md-6">
                         @if($device->photo)
-                        <img src="/{{ $device->photo }}" width="200"><br>
+                        <img src="/{{ $device->photo }}" width="200" class="img img-responsive"><br>
                         @endif
                         <label for="">Elemento: </label>
                         {{ $device->element->name }} <br>
