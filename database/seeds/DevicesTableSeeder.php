@@ -859,6 +859,7 @@ class DevicesTableSeeder extends Seeder
         ]);
            //36
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 31,
             'ubication_id' => 1,
             'dependence_id' => 23,
@@ -1004,6 +1005,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //42
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 5,
             'ubication_id' => 1,
             'dependence_id' => 25,
@@ -1100,6 +1102,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //46
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 37,
             'ubication_id' => 1,
             'dependence_id' => 25,
@@ -1317,6 +1320,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //55
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 44,
             'ubication_id' => 1,
             'dependence_id' => 23,
