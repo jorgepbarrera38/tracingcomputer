@@ -1200,6 +1200,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //50
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 39,
             'ubication_id' => 1,
             'dependence_id' => 23,
@@ -2595,6 +2596,30 @@ class DevicesTableSeeder extends Seeder
             'funcionary_id' => 64,
             'ubication_id' => 4,
             'dependence_id' => 34,
+            'observations' => 'Sin observaciones'
+        ]);
+        //107
+        Device::create([
+            'funcionary_id' => 65,
+            'ubication_id' => 1,
+            'dependence_id' => 13,
+            'element_id' => 1,
+            'description' => 'PC LENOVO serial PBHGM45, CPU INTEL® Core ™ i3 3.4 GHz, Disco Duro 500 Gb, Monitor Lenovo Modelo D186WA Serial V1VAC82, Teclado Lenovo Modelo SK-8821, Mouse Lenovo Modelo MOEUUO',
+            'status' => 'BUENO',
+            'cost' => '1200000',
+            'datebuy' => '2012-09-10', 
+            'initoperation' => '2012-09-10', 
+            'usefullife' => '5',
+            'brand_id' => 2,
+            'serial' => 'PBHGM45',
+            'code' => '2405',
+            'observations' => 'No hay observaciónes'
+        ]);
+        Traceability::create([
+            'device_id' => 48,
+            'funcionary_id' => 5,
+            'ubication_id' => 1,
+            'dependence_id' => 26,
             'observations' => 'Sin observaciones'
         ]);
     }
