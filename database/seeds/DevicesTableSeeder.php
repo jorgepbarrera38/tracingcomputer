@@ -2600,6 +2600,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //107
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 65,
             'ubication_id' => 1,
             'dependence_id' => 13,
@@ -2616,10 +2617,10 @@ class DevicesTableSeeder extends Seeder
             'observations' => 'No hay observaciónes'
         ]);
         Traceability::create([
-            'device_id' => 48,
-            'funcionary_id' => 5,
+            'device_id' => 107,
+            'funcionary_id' => 65,
             'ubication_id' => 1,
-            'dependence_id' => 26,
+            'dependence_id' => 13,
             'observations' => 'Sin observaciones'
         ]);
     }
