@@ -138,9 +138,9 @@ class DevicesTableSeeder extends Seeder
         ]);
         //6
         Device::create([
-            'funcionary_id' => 3,
-            'ubication_id' => 2,
-            'dependence_id' => 2,
+            'funcionary_id' => 55,
+            'ubication_id' => 1,
+            'dependence_id' => 19,
             'element_id' => 1,
             'description' => 'COMPUTADOR LENOVO Serial PBHGM91, CPU INTEL ® CORE ™ I3 - 2130 3,40 GHz, Disco Duro 500 Gb, Memoria Ram 4,00 Gb, Monitor Lenovo Modelo D186WA Serial V1VAC86, Teclado Dell SK-8115 Serial CIU0DJ415-71616-7AI-0MLQ, Mouse Lenovo Modelo MU-0025-O Serial LZ209HD026Z',
             'status' => 'BUENO',
@@ -151,13 +151,13 @@ class DevicesTableSeeder extends Seeder
             'brand_id' => 2,
             'serial' => 'PBHGM91',
             'code' => '00786',
-            'observations' => 'No hay observaciónes'
+            'observations' => 'Estubo anteriormente en Auditoria de Cuentas Médicas Fanny Llanos'
         ]);
         Traceability::create([
             'device_id' => 6,
-            'funcionary_id' => 3,
-            'ubication_id' => 2,
-            'dependence_id' => 2,
+            'funcionary_id' => 55,
+            'ubication_id' => 1,
+            'dependence_id' => 19,
             'observations' => 'Sin observaciones'
         ]);
         //7
@@ -909,6 +909,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //38
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 13,
             'ubication_id' => 1,
             'dependence_id' => 24,
@@ -1078,6 +1079,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //45
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 36,
             'ubication_id' => 1,
             'dependence_id' => 23,
@@ -1689,9 +1691,9 @@ class DevicesTableSeeder extends Seeder
         ]);
         //70
         Device::create([
-            'funcionary_id' => 55,
-            'ubication_id' => 1,
-            'dependence_id' => 19,
+            'funcionary_id' => 66,
+            'ubication_id' => 6,
+            'dependence_id' => 33,
             'element_id' => 1,
             'description' => 'Portátil HP EliteBook 8440p - 14" - Serial CZO103D09D Core i5 520M - Windows 7 Pro - 4 GB RAM - 250 GB HDD Series',
             'status' => 'BUENO',
@@ -1706,10 +1708,10 @@ class DevicesTableSeeder extends Seeder
         ]);
         Traceability::create([
             'device_id' => 70,
-            'funcionary_id' => 55,
-            'ubication_id' => 1,
-            'dependence_id' => 19,
-            'observations' => 'Sin observaciones'
+            'funcionary_id' => 66,
+            'ubication_id' => 6,
+            'dependence_id' => 33,
+            'observations' => 'Lo tuvo anteriormente Yenny Amaya siendo secretaria de Subgerencia adm.'
         ]);
         //71
         Device::create([
@@ -1763,6 +1765,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //73
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 13,
             'ubication_id' => 1,
             'dependence_id' => 24,
