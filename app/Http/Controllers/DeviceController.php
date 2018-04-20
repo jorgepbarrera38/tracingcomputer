@@ -9,6 +9,7 @@ use App\Dependence;
 use App\Element;
 use App\Brand;
 use App\Traceability;
+use Illuminate\Support\Facades\Cache;
 use App\Http\Requests\DeviceFormRequest;
 use Illuminate\Http\Request;
 
@@ -21,26 +22,30 @@ class DeviceController extends Controller
      */
     public function index(Request $request)
     {
-        //Obteniendo datos de búsqueda
-        $ubicationsearch = $request['ubication'];
-        $dependencesearch = $request['dependence'];
-        $funcionarysearch = $request['funcionary'];
-        $codeserialsearch = $request['codeserial'];
-
         //Llamando todos los datos
         $ubications = Ubication::all();
         $dependences = Dependence::all();
         $funcionaries = Funcionary::all();
         $devicesCount = Device::where('state', 'active')->count();
 
+        //Obteniendo datos de búsqueda
+        $ubicationsearch = $request['ubication'];
+        $dependencesearch = $request['dependence'];
+        $funcionarysearch = $request['funcionary'];
+        $codeserialsearch = $request['codeserial'];
+
         $devices = Device::ubicationsearch($ubicationsearch)
-                   ->dependencesearch($dependencesearch)
-                   ->funcionarysearch($funcionarysearch)
-                   ->codeserial($codeserialsearch)
-                   ->orderBy('ubication_id', 'asc')
-                   ->orderBy('dependence_id', 'desc')
-                   ->where('state', 'active')
-                   ->paginate(5);    
+                ->dependencesearch($dependencesearch)
+                ->funcionarysearch($funcionarysearch)
+                ->codeserial($codeserialsearch)
+                ->with('element')
+                ->with('ubication')
+                ->with('dependence')
+                ->with('funcionary')
+                ->orderBy('ubication_id', 'asc')
+                ->orderBy('dependence_id', 'desc')
+                ->where('state', 'active')
+                ->paginate(5);        
 
         return view('devices.index', ['devices'=>$devices, 'ubicationsearch'=>$ubicationsearch, 'dependencesearch'=>$dependencesearch, 'funcionarysearch'=>$funcionarysearch,'codeserialsearch'=>$codeserialsearch,'ubications'=>$ubications, 'dependences'=>$dependences, 'funcionaries'=>$funcionaries, 'devicesCount'=>$devicesCount]);
     }

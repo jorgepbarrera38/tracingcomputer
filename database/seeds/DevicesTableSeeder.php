@@ -2253,6 +2253,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //93
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 64,
             'ubication_id' => 4,
             'dependence_id' => 5,
@@ -2278,6 +2279,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //94
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 64,
             'ubication_id' => 4,
             'dependence_id' => 15,
@@ -2303,6 +2305,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //95
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 64,
             'ubication_id' => 4,
             'dependence_id' => 32,
@@ -2328,6 +2331,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //96
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 64,
             'ubication_id' => 4,
             'dependence_id' => 33,
@@ -2353,6 +2357,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //97
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 64,
             'ubication_id' => 4,
             'dependence_id' => 25,
@@ -2378,6 +2383,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //98
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 64,
             'ubication_id' => 4,
             'dependence_id' => 25,
@@ -2428,6 +2434,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //100
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 64,
             'ubication_id' => 4,
             'dependence_id' => 26,
@@ -2453,6 +2460,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //101
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 64,
             'ubication_id' => 4,
             'dependence_id' => 34,
@@ -2528,6 +2536,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //104
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 64,
             'ubication_id' => 4,
             'dependence_id' => 25,
@@ -2553,6 +2562,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //105
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 64,
             'ubication_id' => 4,
             'dependence_id' => 25,
@@ -2624,6 +2634,30 @@ class DevicesTableSeeder extends Seeder
             'funcionary_id' => 65,
             'ubication_id' => 1,
             'dependence_id' => 13,
+            'observations' => 'Sin observaciones'
+        ]);
+        //108
+        Device::create([
+            'funcionary_id' => 67,
+            'ubication_id' => 2,
+            'dependence_id' => 7,
+            'element_id' => 1,
+            'description' => 'Lenovo MT-M 1652-R4S Serial PBHGM58 CPU Intel ® Core ™ I3 3.4 GHz, Disco Duro 500 Gb, Memoria RAM 4,00 Gb, unidad de CD-DVD',
+            'status' => 'BUENO',
+            'cost' => '1200000',
+            'datebuy' => '1900-01-01', 
+            'initoperation' => '1900-01-01', 
+            'usefullife' => '5',
+            'brand_id' => 2,
+            'serial' => 'PBHGM58',
+            'code' => '2819',
+            'observations' => 'No hay observaciónes'
+        ]);
+        Traceability::create([
+            'device_id' => 108,
+            'funcionary_id' => 67,
+            'ubication_id' => 2,
+            'dependence_id' => 7,
             'observations' => 'Sin observaciones'
         ]);
     }

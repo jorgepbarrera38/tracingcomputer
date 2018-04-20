@@ -342,5 +342,10 @@ class FuncionariesTableSeeder extends Seeder
             'name' => 'Edilberto',
             'lastname' => 'Linares'
         ]);
+        Funcionary::create([
+            'identification' => 67,
+            'name' => 'Andrea',
+            'lastname' => 'Vargas Moya'
+        ]);
     }
 }
