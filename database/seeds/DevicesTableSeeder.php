@@ -13,23 +13,7 @@ class DevicesTableSeeder extends Seeder
      */
     public function run()
     {
-        //1
-       Device::create([
-            'funcionary_id' => 16,
-            'ubication_id' => 2,
-            'dependence_id' => 5,
-            'element_id' => 1,
-            'description' => 'Computador Acer AX1430-SD31F Serial PTSHVPG003140014343000,CPU AMD E-450 APU WITH RADEON ™ HD Graphics 1,65 GHZ, Disco Duro 500 Gb, Memoria Ram 4,00 Gb, Monitor ACER Modelo S181HL serial ETLRF0D001133082348526, Teclado Lenovo Modelo SK8821, Mouse Genius Modelo GM-120014',
-            'status' => 'BUENO',
-            'cost' => '900000',
-            'datebuy' => '2012-07-02', //
-            'initoperation' => '2012-07-02',
-            'usefullife' => '5',
-            'brand_id' => 7,
-            'serial' => 'PTSHVPG003140014343000',
-            'code' => '2309',
-            'observations' => 'Equipo usado por el auxiliar de facturació'
-        ]);
+      
         Traceability::create([
             'device_id' => 1,
             'funcionary_id' => 16,
