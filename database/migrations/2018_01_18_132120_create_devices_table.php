@@ -33,7 +33,7 @@ class CreateDevicesTable extends Migration
             $table->text('description');
             $table->enum('status', ['MALO', 'REGULAR', 'BUENO'])->default('BUENO');
             
-            $table->enum('acquisition', ['COMPRA', 'DONACIÓN'])->default('compra');
+            $table->enum('acquisition', ['COMPRA', 'DONACIÓN'])->default('COMPRA');
             $table->string('cost')->default(0);
             $table->date('datebuy')->default('1900-01-31');
             $table->date('initoperation')->default('1900-01-31');
