@@ -14,13 +14,6 @@ class DevicesTableSeeder extends Seeder
     public function run()
     {
       
-        Traceability::create([
-            'device_id' => 1,
-            'funcionary_id' => 16,
-            'ubication_id' => 2,
-            'dependence_id' => 5,
-            'observations' => 'Sin observaciones'
-        ]);
         //2
         Device::create([
             'funcionary_id' => 5,
