@@ -13,7 +13,7 @@ class DevicesTableSeeder extends Seeder
      */
     public function run()
     {
-      
+       
         //2
         Device::create([
             'funcionary_id' => 5,
