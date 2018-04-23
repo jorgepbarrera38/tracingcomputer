@@ -571,6 +571,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //24
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 10,
             'ubication_id' => 1,
             'dependence_id' => 16,
@@ -1910,6 +1911,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //79
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 60,
             'ubication_id' => 1,
             'dependence_id' => 16,
@@ -1921,6 +1923,7 @@ class DevicesTableSeeder extends Seeder
             'initoperation' => '2017-08-04', 
             'usefullife' => '5',
             'brand_id' => 3,
+            'acquisition' =>'DONACIÓN',
             'serial' => 'CNV310COCK',
             'code' => '3089',
             'observations' => 'Auxiliar de saneamiento'
@@ -2658,6 +2661,31 @@ class DevicesTableSeeder extends Seeder
             'funcionary_id' => 67,
             'ubication_id' => 2,
             'dependence_id' => 7,
+            'observations' => 'Sin observaciones'
+        ]);
+        //109
+        Device::create([
+            'mant' => 'ok',
+            'funcionary_id' => 64,
+            'ubication_id' => 4,
+            'dependence_id' => 34,
+            'element_id' => 1,
+            'description' => 'EQUIPOS DE COMPUTO DE ESCRITORIO PROCESADOR INTEL CORE i5, RAM 4 GB, DISCO 500 GB, PAN: 19"HD, SO WINDOWS 7, VIDEO: 1 GB. QUEMADOR DE CD-DV. MARCA JANUS SERIAL CPU: 131210222287, SERIAL MONITOR: 2XTMH4LD807418 CON MOUSE Y TECLADO',
+            'status' => 'BUENO',
+            'cost' => '800000',
+            'datebuy' => '2014-01-28', 
+            'initoperation' => '2014-01-28', 
+            'usefullife' => '5',
+            'brand_id' => 11,
+            'serial' => '131210222287',
+            'code' => '2927',
+            'observations' => 'Equipo perteneciente al pic municipal de El Retorno'
+        ]);
+        Traceability::create([
+            'device_id' => 109,
+            'funcionary_id' => 64,
+            'ubication_id' => 4,
+            'dependence_id' => 34,
             'observations' => 'Sin observaciones'
         ]);
     }

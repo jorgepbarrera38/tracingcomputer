@@ -45,7 +45,7 @@ class DeviceController extends Controller
                 ->orderBy('ubication_id', 'asc')
                 ->orderBy('dependence_id', 'desc')
                 ->where('state', 'active')
-                ->paginate(5);        
+                ->paginate(8);        
 
         return view('devices.index', ['devices'=>$devices, 'ubicationsearch'=>$ubicationsearch, 'dependencesearch'=>$dependencesearch, 'funcionarysearch'=>$funcionarysearch,'codeserialsearch'=>$codeserialsearch,'ubications'=>$ubications, 'dependences'=>$dependences, 'funcionaries'=>$funcionaries, 'devicesCount'=>$devicesCount]);
     }
@@ -180,6 +180,19 @@ class DeviceController extends Controller
         }
     }
     public function traceabilitiesstore(Request $request){
+        $request->validate([
+            'device_id' => 'required',
+            'funcionary_id' => 'required|exists:funcionaries,id',
+            'ubication_id' => 'required|exists:ubications,id',
+            'dependence_id' => 'required|exists:dependences,id',
+            'observations' => 'required'
+        ], [], [
+            'device_id' => 'Dispositivo',
+            'funcionary_id' => 'Funcionario',
+            'ubication_id' => 'Ubicación',
+            'dependence_id' => 'Dependencia',
+            'observations' => 'Observaciónes'
+        ]);
         $device = Device::where('id', $request->input('device_id'))->where('state', 'active')->first();
         if($device){
             Traceability::create($request->all());
@@ -188,7 +201,7 @@ class DeviceController extends Controller
             $device->ubication_id = $request->input('ubication_id');
             $device->dependence_id = $request->input('dependence_id');
             $device->save();
-            return redirect()->route('devices.index')->with('info', 'Movimiento registrado');
+            return redirect()->route('devices.show', $request->input('device_id'))->with('info', 'Movimiento registrado exitosamente');
         }else{
             abort(404);
         }

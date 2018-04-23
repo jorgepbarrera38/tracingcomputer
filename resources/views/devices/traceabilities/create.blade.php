@@ -4,8 +4,15 @@
     <div class="row"><br>
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">{{ substr($device->description, 0, 90) }}</div>
+                <div class="panel-heading">Registrar movimiento</div>
                 <div class="panel-body">
+                    @if($errors->any())
+                       <div class="alert alert-danger">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                       </div>
+                    @endif
                     <form action="{{ route('traceabilities.store') }}" method="POST">
                         {{ csrf_field() }}
                         <input type="hidden" name="device_id" value="{{ $device->id }}">
@@ -44,9 +51,10 @@
                         </div>
                         <div class="form-group">
                             <label for="">Observaciónes</label>
-                            <textarea name="observations" rows="3" class="form-control"></textarea>
+                            <textarea name="observations" rows="3" class="form-control">{{ old('observations') }}</textarea>
                         </div>
-                            <button type="submit" class="btn btn-primary">Registrar movimiento</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        <a href="{{ route('devices.show', $device->id) }}" class="btn btn-danger">Cancelar</a>
                     </form>
                 </div>
             </div>

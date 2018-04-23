@@ -14,36 +14,34 @@
                     @if( $devices->total() > 0 )
                     Total de resultados: {{ $devices->total() }}
                     {{ session(['urlPrevious'=> request()->fullurl()]) }}
-                    <table class="table table-hover table-condensed">
-                        <thead>
-                            <th>Mant</th>
-                            <th>Elemento</th>
-                            <th>Descripción</th>
-                            <th>Placa interna</th>
-                            <th>Serial</th>
-                            <th>Ubicación</th>
-                            <th>Dependencia</th>
-                            <th>Funcionario</th>
-                            <th>Acción</th>
-                        </thead>
-                        <tbody>
-                            @foreach ($devices as $device)
-                                <tr>
-                                    <td>{{ $device->mant }}</td>
-                                    <td>{{ $device->element->name }}</td>
-                                    <td><p class="text-justify">{{ substr($device->description, 0, 92) }}</p></td>
-                                    <td>{{ $device->code }}</td>
-                                    <td>{{ $device->serial }}</td>
-                                    <td>{{ $device->ubication->name }}</td>
-                                    <td>{{ $device->dependence->name }}</td>
-                                    <td>{{ $device->funcionary->name }} {{ $device->funcionary->lastname }}</td>
-                                    <td>
-                                        <a class="btn btn-info btn-sm" href="{{ route('devices.show', $device->id) }}">Ver</a>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table><center>
+                    <div class="table-responsive">
+                            <table class="table table-hover table-condensed">
+                                <thead>
+                                    <th>Mant</th>
+                                    <th>Elemento</th>
+                                    
+                                    <th>Placa interna</th>
+                                    <th>Serial</th>
+                                    <th>Ubicación</th>
+                                    <th>Dependencia</th>
+                                    <th>Funcionario</th>
+                                </thead>
+                                <tbody>
+                                    @foreach ($devices as $device)
+                                        <tr style="cursor:pointer" onclick="location.href = '{{ route('devices.show', $device->id) }}'">
+                                            <td>{{ $device->mant }}</td>
+                                            <td nowrap>{{ $device->element->name }}</td>
+                                          
+                                            <td>{{ $device->code }}</td>
+                                            <td>{{ $device->serial }}</td>
+                                            <td nowrap>{{ $device->ubication->name }}</td>
+                                            <td nowrap>{{ $device->dependence->name }}</td>
+                                            <td nowrap>{{ $device->funcionary->name }} {{ $device->funcionary->lastname }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                    </div><center>
                     @else
                         No hay coincidencias...
                     @endif
