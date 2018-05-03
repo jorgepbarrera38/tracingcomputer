@@ -402,6 +402,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //17
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 22,
             'ubication_id' => 1,
             'dependence_id' => 16,
@@ -836,6 +837,7 @@ class DevicesTableSeeder extends Seeder
         ]);
            //35
         Device::create([
+            'mant'=>'ok',
             'funcionary_id' => 30,
             'ubication_id' => 1,
             'dependence_id' => 10,
@@ -1473,6 +1475,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //61
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 46,
             'ubication_id' => 1,
             'dependence_id' => 16,
@@ -1522,7 +1525,8 @@ class DevicesTableSeeder extends Seeder
         ]);
         //63
         Device::create([
-            'funcionary_id' => 48,
+            'mant'=>'ok',
+            'funcionary_id' => 33,
             'ubication_id' => 1,
             'dependence_id' => 10,
             'element_id' => 1,
@@ -1539,14 +1543,15 @@ class DevicesTableSeeder extends Seeder
         ]);
         Traceability::create([
             'device_id' => 63,
-            'funcionary_id' => 48,
+            'funcionary_id' => 33,
             'ubication_id' => 1,
             'dependence_id' => 10,
             'observations' => 'Sin observaciones'
         ]);
         //64
         Device::create([
-            'funcionary_id' => 49,
+            'mant' => 'ok',
+            'funcionary_id' => 48,
             'ubication_id' => 1,
             'dependence_id' => 10,
             'element_id' => 1,
@@ -1563,7 +1568,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         Traceability::create([
             'device_id' => 64,
-            'funcionary_id' => 49,
+            'funcionary_id' => 48,
             'ubication_id' => 1,
             'dependence_id' => 10,
             'observations' => 'Sin observaciones'
@@ -2641,6 +2646,7 @@ class DevicesTableSeeder extends Seeder
         ]);
         //108
         Device::create([
+            'mant' => 'ok',
             'funcionary_id' => 67,
             'ubication_id' => 2,
             'dependence_id' => 7,
