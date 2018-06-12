@@ -1404,9 +1404,9 @@ class DevicesTableSeeder extends Seeder
         ]);
         //58
         Device::create([
-            'funcionary_id' => 45,
+            'funcionary_id' => 68,
             'ubication_id' => 2,
-            'dependence_id' => 5,
+            'dependence_id' => 14,
             'element_id' => 1,
             'description' => 'Computador LENOVO serial PBLFB40, CPU Intel ® Core ™ i3 3,40 GHz, Disco Duro 500 Gb, Memoria Ram 4,00 Gb, Monitor Lenovo Modelo D186WA V1C75, Teclado Genius Modelo K639, Mouse Lenovo Modelo MU0025-O',
             'status' => 'BUENO',
@@ -1421,9 +1421,9 @@ class DevicesTableSeeder extends Seeder
         ]);
         Traceability::create([
             'device_id' => 58,
-            'funcionary_id' => 45,
+            'funcionary_id' => 68,
             'ubication_id' => 2,
-            'dependence_id' => 5,
+            'dependence_id' => 14,
             'observations' => 'Sin observaciones'
         ]);
         //59
