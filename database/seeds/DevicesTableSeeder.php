@@ -2679,7 +2679,7 @@ class DevicesTableSeeder extends Seeder
             'ubication_id' => 4,
             'dependence_id' => 34,
             'element_id' => 1,
-            'description' => 'EQUIPOS DE COMPUTO DE ESCRITORIO PROCESADOR INTEL CORE i5, RAM 4 GB, DISCO 500 GB, PAN: 19"HD, SO WINDOWS 7, VIDEO: 1 GB. QUEMADOR DE CD-DV. MARCA JANUS SERIAL CPU: 131210222287, SERIAL MONITOR: 2XTMH4LD807418 CON MOUSE Y TECLADO',
+            'description' => 'EQUIPO DE COMPUTO DE ESCRITORIO PROCESADOR INTEL CORE i5, RAM 4 GB, DISCO 500 GB, PAN: 19"HD, SO WINDOWS 7, VIDEO: 1 GB. QUEMADOR DE CD-DV. MARCA JANUS SERIAL CPU: 131210222287, SERIAL MONITOR: 2XTMH4LD807418 CON MOUSE Y TECLADO',
             'status' => 'BUENO',
             'cost' => '800000',
             'datebuy' => '2014-01-28', 
@@ -2695,6 +2695,30 @@ class DevicesTableSeeder extends Seeder
             'funcionary_id' => 64,
             'ubication_id' => 4,
             'dependence_id' => 34,
+            'observations' => 'Sin observaciones'
+        ]);
+        //110
+        Device::create([
+            'funcionary_id' => 69,
+            'ubication_id' => 5,
+            'dependence_id' => 9,
+            'element_id' => 1,
+            'description' => 'Lenovo MT-M 10AU CPU Intel Core i5, memoria RAM 500 GB.',
+            'status' => 'BUENO',
+            'cost' => '1500000',
+            'datebuy' => '2014-01-28', 
+            'initoperation' => '2014-01-28', 
+            'usefullife' => '5',
+            'brand_id' => 2,
+            'serial' => 'PC02RMS5',
+            'code' => '0987',
+            'observations' => 'Sin observaciónes'
+        ]);
+        Traceability::create([
+            'device_id' => 110,
+            'funcionary_id' => 69,
+            'ubication_id' => 5,
+            'dependence_id' => 9,
             'observations' => 'Sin observaciones'
         ]);
     }
